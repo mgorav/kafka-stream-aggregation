@@ -1,9 +1,9 @@
-##What is this app?
+## What is this app?
 
 Spring Cloud Stream based aggregator processor which aggregates DomainEvent i.e. aggregates a string for a particual key
 
 
-##Running the app:
+## Running the app:
 
 
 ````bash
