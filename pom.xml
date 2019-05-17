@@ -8,11 +8,11 @@
         <version>2.1.5.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.gonnect.kafka.stream</groupId>
-    <artifactId>kafka-stream-aggregation</artifactId>
+    <groupId>com.gonnect.kafka.stream.join</groupId>
+    <artifactId>kafka-stream-join</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>kafka-stream-aggregation</name>
-    <description>Spring Boot Kafka Stream aggregation</description>
+    <name>kafka-stream-join</name>
+    <description>Spring Boot Kafka Stream join</description>
 
 
     <properties>

@@ -1,7 +1,6 @@
 ## What is this app?
 
-Spring Cloud Stream based aggregator processor which aggregates DomainEvent (eventType+boardUuid) i.e. aggregates a string for a particular key
-
+Spring Cloud Stream Kafka adaptation of the [confluent blog example](https://www.confluent.io/blog/distributed-real-time-joins-and-aggregations-on-user-activity-events-using-kafka-streams/)
 
 ## Running the app:
 
@@ -15,13 +14,16 @@ docker-compose up -d
 ```
 
 ````bash
-java -jar target/kafka-streams-aggregate-0.0.1-SNAPSHOT.jar
+java -jar target/kafka-stream-join-0.0.1-SNAPSHOT.jar
 ````
 
 
 Produce a sample data using Producers application few times.
 
-Play time, hit the URL: 
+Play time, run the kafka consumer: 
+
 ```bash
-http://localhost:8080/events
+docker exec -it kafka-stream /opt/kafka/bin/kafka-console-consumer.sh --bootstrap-server 127.0.0.1:9092 --topic output-topic --key-deserializer org.apache.kafka.common.serialization.StringDeserializer --value-deserializer org.apache.kafka.common.serialization.LongDeserializer --property print.key=true --property key.separator="-"
 ```
+
+![alt text](./output.png)
