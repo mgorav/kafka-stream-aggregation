@@ -1,6 +1,6 @@
 ## What is this app?
 
-Spring Cloud Stream based aggregator processor which aggregates DomainEvent i.e. aggregates a string for a particual key
+Spring Cloud Stream based aggregator processor which aggregates DomainEvent (eventType+boardUuid) i.e. aggregates a string for a particular key
 
 
 ## Running the app:
